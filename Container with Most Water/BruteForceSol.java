@@ -1,4 +1,5 @@
-class Solution // Time O(n^2) Space O(1)
+// Time O(n^2) Space O(1)
+class Solution 
 {
     public int maxArea(int[] height)
 	{
