@@ -1,3 +1,5 @@
+//Time: O(n) Space: O(1)
+
 const trap = (height) => {
   let total = 0;
   let a = 0;
