@@ -1,8 +1,5 @@
-/**
- * @param {number[]} height
- * @return {number}
- */
-var trap = function (height) {
+//Time Complexity O(n^2) Space Complexity O(1)
+const trap = function (height) {
   let total = 0;
 
   for (let i = 0; i < height.length; i++) {
