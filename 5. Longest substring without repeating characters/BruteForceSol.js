@@ -1,3 +1,8 @@
+/*
+Time Complexity = O(n^2)
+Space Complexity = O(n)
+*/
+
 const lengthOfLongestSubstring = function (s) {
   if (s.length <= 1) return s.length;
 
