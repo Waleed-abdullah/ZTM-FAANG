@@ -7,29 +7,23 @@ loop through both of the strings O(a + b) push elements into an answer array and
 */
 
 var backspaceCompare = function (s, t) {
-  s = s.split('');
-  t = t.split('');
-  let sTyped = [];
-  let tTyped = [];
+  s = typeBackspace(s);
+  t = typeBackspace(t);
 
-  for (let i = 0; i < s.length; i++) {
-    if (s[i] === '#' && s.length > 0) {
-      sTyped.pop();
-    } else {
-      sTyped.push(s[i]);
-    }
-  }
-  sTyped = sTyped.join('');
-
-  for (let i = 0; i < t.length; i++) {
-    if (t[i] === '#' && t.length > 0) {
-      tTyped.pop();
-    } else {
-      tTyped.push(t[i]);
-    }
-  }
-  tTyped = tTyped.join('');
-
-  if (tTyped === sTyped) return true;
+  if (s === t) return true;
   else return false;
+};
+
+const typeBackspace = (string) => {
+  string = string.split('');
+  const arr = [];
+
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === '#') {
+      arr.pop();
+    } else {
+      arr.push(string[i]);
+    }
+  }
+  return arr.join('');
 };
