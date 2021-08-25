@@ -6,6 +6,8 @@ split into array
 loop through both of the strings O(a + b) push elements into an answer array and pop them out if we see a hash and if the length is > 0
 */
 
+//Time Complexity O(a + b) Space Complexity O(a + b)
+
 var backspaceCompare = function (s, t) {
   s = typeBackspace(s);
   t = typeBackspace(t);
