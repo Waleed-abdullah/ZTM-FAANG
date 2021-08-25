@@ -1,4 +1,5 @@
 //Time: O(n) Space: O(1)
+//two shifting pointers technique
 
 const trap = (height) => {
   let total = 0;
@@ -13,7 +14,7 @@ const trap = (height) => {
         const water = maxL - height[a];
         total += water;
       } else {
-        maxL = Math.max(maxL, height[a]);
+        maxL = height[a];
       }
       a++;
     } else {
@@ -21,7 +22,7 @@ const trap = (height) => {
         const water = maxR - height[b];
         total += water;
       } else {
-        maxR = Math.max(maxR, height[b]);
+        maxR = height[b];
       }
       b--;
     }
