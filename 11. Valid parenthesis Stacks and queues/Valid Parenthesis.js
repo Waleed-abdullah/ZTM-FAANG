@@ -1,4 +1,31 @@
 //Time O(n) Space O(N)
+//cleaner solution
+
+const parens = {
+  '(': ')',
+  '[': ']',
+  '{': '}',
+};
+
+var isValid = function (s) {
+  if (s.length === 0) return true;
+  if (s.length === 1) return false;
+
+  let stack = [];
+
+  for (let i = 0; i < s.length; i++) {
+    if (parens[s[i]]) {
+      stack.push(s[i]);
+    } else {
+      const leftBracket = stack.pop();
+      const rightBracket = parens[leftBracket];
+      if (s[i] !== rightBracket) return false;
+    }
+  }
+  return stack.length === 0;
+};
+
+//a bit dirty - ish solution
 var isValid = function (s) {
   if (s.length === 0) return true;
   if (s.length === 1) return false;
