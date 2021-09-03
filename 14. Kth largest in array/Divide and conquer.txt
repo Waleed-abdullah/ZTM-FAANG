@@ -1,0 +1,6 @@
+-Divide and conquer algorithmic paradigm
+1. Multi - branched recursion
+2. Breaks main problem into multiple smaller but same sub-problems 
+3. Combines the solution of the subproblem into the solution of the original problem.
+
+Examples: QuickSort, MergeSort
