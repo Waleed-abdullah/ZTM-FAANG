@@ -1,4 +1,4 @@
-// O(n)
+//Time :  O(n) Space: O(log n) worst case O(n)
 var maxDepth = function (root, count = 0) {
   if (!root) return count;
 
