@@ -1,4 +1,4 @@
-// Time: O(n) Space: O(h)
+// Time: O(n) Space: O(n)
 var isValidBST = function (node, low = null, high = null) {
   if (!node) return true;
   //check with the boundaries
