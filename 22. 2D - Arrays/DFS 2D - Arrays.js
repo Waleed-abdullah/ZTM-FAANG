@@ -1,8 +1,10 @@
+//DFS Time complexity: O(n) Space complexity: O(n)
+
 const directions = [
-  [-1, 0],
-  [0, 1],
-  [1, 0],
-  [0, -1],
+  [-1, 0], //up
+  [0, 1], //right
+  [1, 0], //down
+  [0, -1], //left
 ];
 
 const matrix = [
