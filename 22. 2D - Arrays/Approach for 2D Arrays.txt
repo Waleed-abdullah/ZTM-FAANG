@@ -1,0 +1,3 @@
+- 2 types of traversals BFS and DFS.
+- Sometimes we should think about using sequential order instead of BFS and DFS
+and let BFS and DFS solve the sub-problem for us.
