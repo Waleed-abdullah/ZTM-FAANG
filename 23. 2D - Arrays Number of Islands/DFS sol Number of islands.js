@@ -1,3 +1,9 @@
+/*
+Time: O(N + N) -> O(2N) -> O(n) or  O(M x N)
+Space: O(N)
+BFS solution is more time efficient as compared to the DFS solution
+*/
+
 const directions = [
   [-1, 0],
   [0, 1],

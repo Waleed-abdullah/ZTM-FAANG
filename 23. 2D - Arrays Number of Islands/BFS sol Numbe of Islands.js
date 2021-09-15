@@ -1,3 +1,9 @@
+/*
+Time: O(N + N) -> O(2N) -> O(n) or  O(M x N)
+Space: O(the largest diagonal in the grid) or O(max(M, N)) (not always the case)
+BFS solution is more time efficient as compared to the DFS solution
+*/
+
 const directions = [
   [-1, 0], //up
   [0, 1], //right
