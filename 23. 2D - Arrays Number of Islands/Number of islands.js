@@ -1,8 +1,3 @@
-/**
- * @param {character[][]} grid
- * @return {number}
- */
-
 const directions = [
   [-1, 0],
   [0, 1],
