@@ -1,3 +1,5 @@
+//Time : O(n) Space: O(n)
+
 const INF = Infinity;
 
 const grid = [
