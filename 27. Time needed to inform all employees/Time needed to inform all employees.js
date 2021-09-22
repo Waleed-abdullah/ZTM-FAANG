@@ -1,3 +1,5 @@
+//Time : O(3n) -> O(n) Space O(3n) -> O(n)
+
 const numOfMinutes = function (n, headID, managers, informTime) {
   const graph = getAdjList(managers);
   const timeTaken = DFS(graph, headID, informTime);
