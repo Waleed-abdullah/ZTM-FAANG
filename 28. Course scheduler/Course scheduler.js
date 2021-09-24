@@ -1,3 +1,5 @@
+//Time complexity : O(p + n^3) Space complexity : O(n^2)
+
 const canFinish = function (n, prerequisites) {
   const adjList = new Array(n).fill(0).map(() => []);
 
