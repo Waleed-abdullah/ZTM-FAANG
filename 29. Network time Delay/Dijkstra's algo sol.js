@@ -83,36 +83,39 @@ class PriorityQueue {
   }
 }
 
-
-const networkDelayTime = function(times, N, k) {
-  const distances = new Array(N).fill(Infinity);
-  const adjList = distances.map(() => []);
+//Time Complexity O(2N + E + (E*logN + NlogN)) -> O(ElogN) where E represents Edges
+//Space Complexity O(E + N)
+const networkDelayTime = function (times, N, k) {
+  const distances = new Array(N).fill(Infinity); // N
+  const adjList = distances.map(() => []); // N
   distances[k - 1] = 0;
-  
-  const heap = new PriorityQueue((a, b) => distances[a] < distances[b]);
+
+  const heap = new PriorityQueue((a, b) => distances[a] < distances[b]); //PQ doesnt allow for duplicate values
   heap.push(k - 1);
-  
-  for(let i = 0; i < times.length; i++) {
+
+  for (let i = 0; i < times.length; i++) {
+    // E
     const source = times[i][0];
     const target = times[i][1];
     const weight = times[i][2];
     adjList[source - 1].push([target - 1, weight]);
   }
-  
-  while(!heap.isEmpty()) {
+
+  while (!heap.isEmpty()) {
+    // E*logN + NlogN
     const currentVertex = heap.pop();
 
     const adjacent = adjList[currentVertex];
-    for(let i = 0; i < adjacent.length; i++) {
+    for (let i = 0; i < adjacent.length; i++) {
       const neighboringVertex = adjacent[i][0];
       const weight = adjacent[i][1];
-      if(distances[currentVertex] + weight < distances[neighboringVertex]) {
-          distances[neighboringVertex] = distances[currentVertex] + weight;
-          heap.push(neighboringVertex);
+      if (distances[currentVertex] + weight < distances[neighboringVertex]) {
+        distances[neighboringVertex] = distances[currentVertex] + weight;
+        heap.push(neighboringVertex);
       }
     }
   }
-  
+
   const ans = Math.max(...distances);
 
   return ans === Infinity ? -1 : ans;
