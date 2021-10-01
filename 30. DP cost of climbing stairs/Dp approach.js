@@ -1,3 +1,4 @@
+//Time O(n) Space O(n + n) -> O(n)
 const minCostClimbingStairs = function (cost) {
   const n = cost.length;
   const dp = [];
