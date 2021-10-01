@@ -1,3 +1,5 @@
+//Time O(2^n) Space O(n)
+
 const minCostClimbingStairs = function (cost) {
   const n = cost.length;
   return Math.min(minCost(n - 1, cost), minCost(n - 2, cost));
