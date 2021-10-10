@@ -1,7 +1,4 @@
-/**
- * @param {character[][]} board
- * @return {void} Do not return anything, modify board in-place instead.
- */
+//Time: O(9!^9) Space: O(81) -> O(1)
 var solveSudoku = function (board) {
   const n = board.length;
   const boxes = new Array(n),
